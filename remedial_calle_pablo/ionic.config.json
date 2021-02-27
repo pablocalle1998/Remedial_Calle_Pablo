@@ -1,0 +1,7 @@
+{
+  "name": "remedial_calle_pablo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
