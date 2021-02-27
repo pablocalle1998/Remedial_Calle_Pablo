@@ -15,14 +15,10 @@ export class LibrosService {
   saveLibro(libro : Libro){
 
     const refLibro = this.afs.collection("libros");
-
     if(libro.uid==null){
       libro.uid = this.afs.createId();
     } 
-
     refLibro.doc(libro.uid).set(Object.assign({}, libro), {merge: true})
-
-
   }
 
 
@@ -30,4 +26,19 @@ export class LibrosService {
 
     return this.afs.collection("libros").valueChanges();
   }
+
+  reserva(libro : Libro){
+
+    const refLibro = this.afs.collection("libros");
+    if (libro.stock = 0){
+      
+
+    }else{
+      libro.stock = libro.stock - 1;
+      
+    }
+    /*refLibro.doc(Libro.name).set(Object.assign({}, Libro), { merge: true})*/
+
+  }
+
 }
