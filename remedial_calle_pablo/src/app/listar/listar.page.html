@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Listar libros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>
+      Libros guardados
+    </ion-list-header>
+
+    <ion-item *ngFor="let libro of libros |async">
+      
+      <ion-label > 
+      <!--<ion-label (click)="editarContacto(contacto)"> aqui va-->
+        <h2>{{libro.nombre}}</h2>
+        <ion-avatar slot="start">
+          <img src="{{libro.foto}}">
+        </ion-avatar>
+
+        
+      </ion-label>
+    </ion-item>
+  
+  </ion-list>
+
+  <ion-item>  
+    <ion-button color="dark" (click)="nuevoContacto()" >Nuevo Contacto</ion-button>
+  </ion-item>
+
+</ion-content>

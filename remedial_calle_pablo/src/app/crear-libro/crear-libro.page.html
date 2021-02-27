@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Crear libros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h3>Vamo a saludar a </h3> 
+
+
+
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="libro.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Tipo</ion-label>
+    <ion-input [(ngModel)]="libro.tipo"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position="floating">Raza</ion-label>
+    <ion-input [(ngModel)]="libro.raza"></ion-input>
+  </ion-item>
+  
+  
+  <ion-item>  
+    <ion-label position="floating">Edad</ion-label>
+    <ion-input [(ngModel)]="libro.edad" ></ion-input>
+  </ion-item>
+
+  <ion-item>  
+    <ion-label position="floating">Adoptado</ion-label>
+    <ion-checkbox [(ngModel)]="libro.adoptado" ></ion-checkbox>
+  </ion-item>
+
+  <ion-item>  
+    <ion-label position="floating">Url de imagen</ion-label>
+    <ion-input [(ngModel)]="libro.foto" ></ion-input>
+  </ion-item>
+
+  
+
+  <ion-item>  
+    <ion-button color="dark" (click)="guardarLibro()" >Guardar</ion-button>
+  </ion-item>
+
+  
+
+
+
+</ion-content>
