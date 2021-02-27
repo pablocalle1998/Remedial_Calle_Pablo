@@ -18,7 +18,7 @@ export class ListarPage implements OnInit {
   ngOnInit() {
 
     this.libros = this.librosService.getLibros();
-    console.log("ESTO RECIBE", this.libros);
+    //console.log("ESTO RECIBE", this.libros);
   }
 
   reserva() {
@@ -26,7 +26,4 @@ export class ListarPage implements OnInit {
     this.libro= new Libro();
    
     }
-
-  
-
 }

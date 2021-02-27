@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Libro } from '../model/libro';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { convertUpdateArguments } from '@angular/compiler/src/compiler_util/expression_converter';
 
 
 @Injectable({
@@ -29,16 +30,21 @@ export class LibrosService {
 
   reserva(libro : Libro){
 
-    const refLibro = this.afs.collection("libros");
-    if (libro.stock = 0){
-      
+    var stock:number = libro.stock;
+
+    
+    /*const refLibro = this.afs.collection("libros");*/
+    if (stock = 0){
+      var mensaje:string = "Stock Agotado";
+      console.log(mensaje);
 
     }else{
-      libro.stock = libro.stock - 1;
+      stock = stock - 1;
       
     }
-    /*refLibro.doc(Libro.name).set(Object.assign({}, Libro), { merge: true})*/
+  
 
   }
+  
 
 }
