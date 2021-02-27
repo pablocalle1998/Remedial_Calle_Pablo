@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Listar libros</ion-title>
+    <ion-title>Lista de libros</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -20,21 +20,27 @@
       <ion-label > 
       <!--<ion-label (click)="editarContacto(contacto)"> aqui va-->
         <h2>{{libro.nombre}}</h2>
-        <h3>{{libro.categoria}}</h3>
+        <h3>{{libro.uid_categoria}}</h3>
+        <h3>{{libro.uid_autor}}</h3>
         <h3>{{libro.stock}}</h3>
-        <h3>{{libro.autor}}</h3>
+        
+        <ion-button color="dark"  (click)="reserva()" >reservar</ion-button>
         <ion-avatar slot="start">
-          <img src="{{libro.foto}}">
+          <img src="../../assets/portada.jpg">
+          
         </ion-avatar>
 
         
+
       </ion-label>
+
+
     </ion-item>
   
   </ion-list>
 
   <ion-item>  
-    <ion-button color="dark" (click)="nuevoContacto()" >Nuevo Contacto</ion-button>
+    <!--<ion-button color="dark" (click)="nuevoContacto()" >Nuevo Contacto</ion-button>-->
   </ion-item>
 
 </ion-content>
